@@ -14,4 +14,11 @@
         android:layout_margin="10dp"
         android:text="EventBus"/>
 
+    <Button
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="RecyclerView"/>
+
 </LinearLayout>
