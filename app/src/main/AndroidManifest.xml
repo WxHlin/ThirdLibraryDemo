@@ -19,8 +19,10 @@
         <activity android:name=".eventbus.EventBusActivity" />
         <activity android:name=".eventbus.EventBusMessageActivity" />
         <activity android:name=".eventbus.EventBusStickyActivity" />
-        <activity android:name=".recycleview.RecyclerViewActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".recycleview.RecyclerViewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".customview.CustomViewActivity"></activity>
     </application>
 
 </manifest>
