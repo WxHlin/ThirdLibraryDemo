@@ -36,7 +36,7 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         //设置适配器
         adapter=new MyAdapter(RecyclerViewActivity.this,datas);
         recyclerView.setAdapter(adapter);
-        //点击
+        //点击    MyAdapter接口回调
         adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
             @Override
             public void OnItemClick(View view, String data) {
