@@ -2,12 +2,14 @@ package com.demo.thirdlibrarydemo.recycleview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.demo.thirdlibrarydemo.R;
 
@@ -34,7 +36,18 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         //设置适配器
         adapter=new MyAdapter(RecyclerViewActivity.this,datas);
         recyclerView.setAdapter(adapter);
-        //LayoutManager
+        //点击
+        adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(View view, String data) {
+                Toast.makeText(RecyclerViewActivity.this,data,Toast.LENGTH_SHORT);
+            }
+        });
+
+        /**
+         * 设置动画，可自定义
+         */
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
     }
 
@@ -56,10 +69,11 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.add:
-
+                adapter.addData(0,"new data");
+                recyclerView.scrollToPosition(0);//添加数据后，显示第一条数据
                 break;
             case R.id.delete:
-
+                adapter.removeData(0,"new data");
                 break;
             case R.id.list:
                 /**
@@ -81,7 +95,7 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
                 recyclerView.setLayoutManager(new GridLayoutManager(RecyclerViewActivity.this,3,GridLayoutManager.VERTICAL,false));
                 break;
             case R.id.flow:
-                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));
+                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
                 break;
         }
     }
