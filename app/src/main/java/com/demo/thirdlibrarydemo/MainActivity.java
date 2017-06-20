@@ -8,12 +8,13 @@ import android.widget.Button;
 
 import com.demo.thirdlibrarydemo.customview.CustomViewActivity;
 import com.demo.thirdlibrarydemo.eventbus.EventBusActivity;
+import com.demo.thirdlibrarydemo.premission.PremissionActivity;
 import com.demo.thirdlibrarydemo.recycleview.RecyclerViewActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
 
-    private Button event_bus ,recyclerView,cus;
+    private Button event_bus ,recyclerView,cus,premission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +25,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
         event_bus= (Button) findViewById(R.id.event_bus);
         recyclerView= (Button) findViewById(R.id.recyclerView);
         cus= (Button) findViewById(R.id.cus);
+        premission= (Button) findViewById(R.id.premission);
 
         event_bus.setOnClickListener(this);
         recyclerView.setOnClickListener(this);
         cus.setOnClickListener(this);
+        premission.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +44,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.cus:
                 startActivity(new Intent(MainActivity.this, CustomViewActivity.class));
+                break;
+            case R.id.premission:
+                startActivity(new Intent(MainActivity.this, PremissionActivity.class));
                 break;
         }
     }
