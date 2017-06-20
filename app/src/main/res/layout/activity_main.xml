@@ -35,4 +35,11 @@
         android:layout_margin="10dp"
         android:text="安卓6.0权限封装"/>
 
+    <Button
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="安banner"/>
+
 </LinearLayout>

@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demo.thirdlibrarydemo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,7 +31,14 @@
         <activity
             android:name=".premission.BaseActivity"
             android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".banner.BannerActivity" />
+        <activity android:name=".banner.BannerAnimationActivity"></activity>
+        <activity android:name=".banner.BannerStyleActivity"></activity>
+        <activity android:name=".banner.IndicatorPositionActivity"></activity>
+        <activity android:name=".banner.CustomBannerActivity"></activity>
+        <activity android:name=".banner.BannerLocalActivity"></activity>
+        <activity android:name=".banner.CustomViewPagerActivity"></activity>
     </application>
 
 </manifest>

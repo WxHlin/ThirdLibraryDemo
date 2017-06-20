@@ -65,7 +65,7 @@ public class PremissionActivity extends BaseActivity {
         Intent in=new Intent(Intent.ACTION_CALL);
         Uri data=Uri.parse("tel:"+"10010");
         in.setData(data);
-        this.startActivity(in);//此处标红不影响编译  App Link
+        this.startActivity(in);//此处标红不影响编译
     }
 
 //    @Override
