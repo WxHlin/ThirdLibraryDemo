@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demo.thirdlibrarydemo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -33,12 +33,13 @@
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".banner.BannerActivity" />
-        <activity android:name=".banner.BannerAnimationActivity"></activity>
-        <activity android:name=".banner.BannerStyleActivity"></activity>
-        <activity android:name=".banner.IndicatorPositionActivity"></activity>
-        <activity android:name=".banner.CustomBannerActivity"></activity>
-        <activity android:name=".banner.BannerLocalActivity"></activity>
-        <activity android:name=".banner.CustomViewPagerActivity"></activity>
+        <activity android:name=".banner.BannerAnimationActivity" />
+        <activity android:name=".banner.BannerStyleActivity" />
+        <activity android:name=".banner.IndicatorPositionActivity" />
+        <activity android:name=".banner.CustomBannerActivity" />
+        <activity android:name=".banner.BannerLocalActivity" />
+        <activity android:name=".banner.CustomViewPagerActivity" />
+        <activity android:name=".asynctask.AsyncTaskActivity"></activity>
     </application>
 
 </manifest>

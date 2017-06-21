@@ -40,6 +40,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="安banner"/>
+        android:text="banner库"/>
+
+    <Button
+        android:id="@+id/async_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="AsyncTask使用"/>
 
 </LinearLayout>
