@@ -1,8 +1,9 @@
 package com.demo.thirdlibrarydemo.customviewpager;
 
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -31,6 +32,10 @@ public class MyCustomViewPagerActivity extends AppCompatActivity {
             //添加到MyCustomViewPager这个viewgroup中
             viewPager.addView(imageView);
         }
+
+        View testView=View.inflate(this,R.layout.input,null);
+        //添加一个页面
+        viewPager.addView(testView,2);
 
         for (int i = 0; i <viewPager.getChildCount() ; i++) {
             RadioButton rb=new RadioButton(this);
