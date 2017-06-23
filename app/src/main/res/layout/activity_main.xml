@@ -29,6 +29,13 @@
         android:text="自定义view"/>
 
     <Button
+        android:id="@+id/cus_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="自定义viewpager"/>
+
+    <Button
         android:id="@+id/premission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:atguigu="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.demo.thirdlibrarydemo.customview.CustomViewActivity">
 
-    <com.demo.thirdlibrarydemo.customview.CustomView
+
+    <!--自定义view继承ToggleButton-->
+    <com.demo.thirdlibrarydemo.customview.MyToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"/>
+
+    <!--自定义view-->
+    <com.demo.thirdlibrarydemo.customview.MyLoadingView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <!--自定义属性-->
+    <com.demo.thirdlibrarydemo.customview.MyAttributeView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        atguigu:my_age="100"
+        atguigu:my_name="android2222"
+        atguigu:my_bg="@mipmap/b3"/>
+
+    <Button
+        android:id="@+id/viewpager_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义viewpager"/>
+
 
 </LinearLayout>
