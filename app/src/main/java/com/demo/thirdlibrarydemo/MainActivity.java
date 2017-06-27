@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.demo.thirdlibrarydemo.asynctask.AsyncTaskActivity;
+import com.demo.thirdlibrarydemo.attrsandcustom.AttrsAndCustomActivity;
 import com.demo.thirdlibrarydemo.banner.BannerActivity;
 import com.demo.thirdlibrarydemo.customview.CustomViewActivity;
 import com.demo.thirdlibrarydemo.customviewpager.MyCustomViewPagerActivity;
@@ -17,7 +18,7 @@ import com.demo.thirdlibrarydemo.recycleview.RecyclerViewActivity;
 public class MainActivity extends Activity implements View.OnClickListener{
 
     private Button event_bus ,recyclerView,cus,premission,banner,async_task
-            ,cus_viewpager;
+            ,cus_viewpager,attrs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         premission= (Button) findViewById(R.id.premission);
         banner= (Button) findViewById(R.id.banner);
         async_task= (Button) findViewById(R.id.async_task);
+        attrs= (Button) findViewById(R.id.attrs);
 
         event_bus.setOnClickListener(this);
         recyclerView.setOnClickListener(this);
@@ -43,6 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         premission.setOnClickListener(this);
         banner.setOnClickListener(this);
         async_task.setOnClickListener(this);
+        attrs.setOnClickListener(this);
     }
 
     @Override
@@ -68,6 +71,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.async_task:
                 startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));
+                break;
+            case R.id.attrs:
+                startActivity(new Intent(MainActivity.this, AttrsAndCustomActivity.class));
                 break;
         }
     }

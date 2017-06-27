@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.demo.thirdlibrarydemo.attrsandcustom.AttrsAndCustomActivity">
+
+    <com.demo.thirdlibrarydemo.attrsandcustom.TopBar
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:leftBtnBackground="@android:color/darker_gray"
+        custom:leftBtnText="返回"
+        custom:leftBtnTextColor="@android:color/white"
+        custom:titleText="标题"
+        custom:titleTextColor="@android:color/black"
+        custom:titleTextSize="15sp"
+        custom:rightBtnBackground="@android:color/darker_gray"
+        custom:rightBtnText="进入"
+        custom:rightBtnTextColor="@android:color/white">
+
+    </com.demo.thirdlibrarydemo.attrsandcustom.TopBar>
+
+</android.support.constraint.ConstraintLayout>

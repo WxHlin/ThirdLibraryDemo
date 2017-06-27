@@ -12,48 +12,63 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="EventBus"/>
+        android:textAllCaps="false"
+        android:text="EventBus" />
 
     <Button
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="RecyclerView"/>
+        android:textAllCaps="false"
+        android:text="RecyclerView" />
 
     <Button
         android:id="@+id/cus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="自定义view"/>
+        android:textAllCaps="false"
+        android:text="自定义view" />
 
     <Button
         android:id="@+id/cus_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="自定义viewpager"/>
+        android:textAllCaps="false"
+        android:text="自定义viewpager" />
 
     <Button
         android:id="@+id/premission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="安卓6.0权限封装"/>
+        android:textAllCaps="false"
+        android:text="安卓6.0权限封装" />
 
     <Button
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="banner库"/>
+        android:textAllCaps="false"
+        android:text="banner库" />
 
     <Button
         android:id="@+id/async_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="AsyncTask使用"/>
+        android:textAllCaps="false"
+        android:text="AsyncTask使用" />
+
+    <Button
+        android:id="@+id/attrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:text="自定义属性+自定义View+TopBar" />
 
 </LinearLayout>

@@ -40,7 +40,9 @@
         <activity android:name=".banner.BannerLocalActivity" />
         <activity android:name=".banner.CustomViewPagerActivity" />
         <activity android:name=".asynctask.AsyncTaskActivity" />
-        <activity android:name=".customviewpager.MyCustomViewPagerActivity"></activity>
+        <activity android:name=".customviewpager.MyCustomViewPagerActivity" />
+        <activity android:name=".autoLayout.AutoLayoutActivity" />
+        <activity android:name=".attrsandcustom.AttrsAndCustomActivity"></activity>
     </application>
 
 </manifest>
