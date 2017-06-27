@@ -34,7 +34,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView=View.inflate(context, R.layout.itemview,null);
-        return new MyViewHolder(itemView);
+        MyViewHolder holder=new MyViewHolder(itemView);
+        return holder;
     }
 
     /**
@@ -47,6 +48,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         holder.text.setText(datas.get(position));
         if (position%2==0){
             holder.img.setImageDrawable(context.getResources().getDrawable(R.mipmap.ic_launcher));
+        } else{//添加此处else,recyclerView在滑动过程中不会显示错乱，具体原因还不清楚
+            holder.img.setImageDrawable(context.getResources().getDrawable(R.mipmap.download_nothing));
         }
     }
 

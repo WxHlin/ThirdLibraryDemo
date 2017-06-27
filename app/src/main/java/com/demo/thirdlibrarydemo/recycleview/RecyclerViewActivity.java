@@ -1,5 +1,6 @@
 package com.demo.thirdlibrarydemo.recycleview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class RecyclerViewActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button add,delete,list,grid,flow;
+    private Button add,delete,list,grid,flow,more_layout;
     private RecyclerView recyclerView;
 
     private ArrayList<String> datas=new ArrayList<String>();
@@ -40,10 +41,12 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
             @Override
             public void OnItemClick(View view, String data) {
-                Toast.makeText(RecyclerViewActivity.this,data,Toast.LENGTH_SHORT);
+                Toast.makeText(RecyclerViewActivity.this,data,Toast.LENGTH_SHORT).show();
             }
         });
 
+        //添加自定义分割线，大部分情况下载item最外层中添加margin
+        recyclerView.addItemDecoration(new MyDecoration(RecyclerViewActivity.this));
         /**
          * 设置动画，可自定义
          */
@@ -58,22 +61,24 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
         list= (Button) findViewById(R.id.list);
         grid= (Button) findViewById(R.id.grid);
         flow= (Button) findViewById(R.id.flow);
+        more_layout= (Button) findViewById(R.id.more_layout);
         add.setOnClickListener(this);
         delete.setOnClickListener(this);
         list.setOnClickListener(this);
         grid.setOnClickListener(this);
         flow.setOnClickListener(this);
+        more_layout.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.add:
-                adapter.addData(0,"new data");
+            case R.id.add://添加
+                adapter.addData(0,"new data");//第一个参数是添加的位置
                 recyclerView.scrollToPosition(0);//添加数据后，显示第一条数据
                 break;
-            case R.id.delete:
-                adapter.removeData(0,"new data");
+            case R.id.delete://删除
+                adapter.removeData(0,"new data");//第一个参数是删除的位置
                 break;
             case R.id.list:
                 /**
@@ -96,6 +101,9 @@ public class RecyclerViewActivity extends AppCompatActivity implements View.OnCl
                 break;
             case R.id.flow:
                 recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+                break;
+            case R.id.more_layout://加载不同布局
+                startActivity(new Intent(RecyclerViewActivity.this,MoreLayoutActivity.class));
                 break;
         }
     }

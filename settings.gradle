@@ -1,1 +1,1 @@
-include ':app', ':banner', ':banner-master'
+include ':app', ':banner', ':banner-master', ':刷新'
